@@ -13,6 +13,7 @@ const Posts = ({ post }) => {
     noOfLikes,
     id,
     isFavorite,
+    comments,
   } = post;
 
   return (
@@ -28,7 +29,11 @@ const Posts = ({ post }) => {
           isFavorite={isFavorite}
         />
       </div>
-      <PostFooter description={description} noOfLikes={noOfLikes} />
+      <PostFooter
+        description={description}
+        noOfLikes={noOfLikes}
+        comments={comments}
+      />
       <style jsx>{`
         @media only screen and (min-device-width: 1210px) and (max-device-width: 1440px) {
           .post-container {

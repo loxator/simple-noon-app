@@ -18,5 +18,6 @@ for (let i = 0; i < NUMBER_OF_POSTS; i++) {
     postImg: `https://picsum.photos/id/${generateRandom(100, 500)}/600`,
     noOfLikes: generateRandom(1, 1000),
     isFavourite: generateRandom(0, 1),
+    comments: generateRandom(0, 100),
   });
-
+}
