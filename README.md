@@ -1,30 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Noon FE Test
 
-## Getting Started
+This is a website made using NextJS for the purpose of a test sent by Noon.com . It displays a static list of photographs that user can **like** or **unlike**. Once liked, the user can view these photographs in the **Favorites**' section. It makes use of` NextJS, styled-jsx and fontawesome icons`
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Folder Structure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- components - Contains reusable components, structured in a logical manner
+- pages - Contains webpages, built using the above components
+- contexts - Contains the React Context, used instead of Redux to handle global state as it was small
+- public - Contains assets to be served over the website
+- styles - Contains a starter global stylesheet to reset the HTML elements and set fonts
+- utils - Resuable small pieces of code
+- mock - Mock data used to populate the state
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+Running `yarn dev` will install all dependencies and start the development server at `http://localhost:3000`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
