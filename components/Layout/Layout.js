@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 const Layout = ({ children }) => (
   <div>
     <Head>
-      <title>A very sad Noon Test Application</title>
+      <title>Noon Test Application</title>
 
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
