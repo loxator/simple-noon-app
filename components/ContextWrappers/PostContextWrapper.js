@@ -1,11 +1,28 @@
 import PostContext from "../../contexts/PostContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const PostContextWrapper = ({ children, posts }) => {
-  const [listOfPosts, setPosts] = useState(posts);
-  const [favPosts, setFavPosts] = useState(
-    posts.filter((post) => post.isFavorite)
-  );
+  const [listOfPosts, setPosts] = useState([]);
+  const [favPosts, setFavPosts] = useState([]);
+  useEffect(() => {
+    if (
+      localStorage.getItem("favorites") &&
+      localStorage.getItem("favorites").length
+    ) {
+      setFavPosts(JSON.parse(localStorage.getItem("favorites")));
+    } else {
+      setFavPosts(posts.filter((post) => post.isFavorite));
+    }
+    if (localStorage.getItem("posts") && localStorage.getItem("posts").length) {
+      setPosts(JSON.parse(localStorage.getItem("posts")));
+    } else {
+      setPosts(posts);
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favPosts));
+    localStorage.setItem("posts", JSON.stringify(listOfPosts));
+  }, [favPosts, posts]);
 
   //Toggle Favorite state of a post
   const toggleFavorite = (id) => {
