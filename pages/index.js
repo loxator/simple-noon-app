@@ -1,22 +1,28 @@
 import Layout from "../components/Layout/Layout";
 import Posts from "../components/Posts/Posts";
+import { useContext } from "react";
+import PostContext from "../contexts/PostContext";
 
-const Home = () => (
-  <Layout>
-    <div className="index-container">
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 1].map(() => (
-        <Posts />
-      ))}
-    </div>
-    <style jsx>{`
-      @media only screen and (min-device-width: 800px) {
-        .index-container {
-          display: flex;
-          flex-wrap: wrap;
+const Home = () => {
+  const { listOfPosts } = useContext(PostContext);
+
+  return (
+    <Layout>
+      <div className="index-container">
+        {listOfPosts.map((post) => (
+          <Posts key={post.id} post={post} />
+        ))}
+      </div>
+      <style jsx>{`
+        @media only screen and (min-device-width: 800px) {
+          .index-container {
+            display: flex;
+            flex-wrap: wrap;
+          }
         }
-      }
-    `}</style>
-  </Layout>
-);
+      `}</style>
+    </Layout>
+  );
+};
 
 export default Home;

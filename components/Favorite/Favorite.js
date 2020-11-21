@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import PostContext from "../../contexts/PostContext";
 import clsx from "clsx";
 
-const Favorite = () => {
-  const [isFavorite, setIsFavorite] = useState(false);
+const Favorite = ({ isFavorite, postId }) => {
+  const { toggleFavorite } = useContext(PostContext);
+
   return (
     <div
       className={clsx("icon-container", isFavorite && "favorite")}
-      onClick={() => setIsFavorite(!isFavorite)}
+      onClick={() => toggleFavorite(postId)}
     >
       <FontAwesomeIcon icon={faHeart} />
       <style jsx>{`

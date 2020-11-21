@@ -1,6 +1,6 @@
-const PostFooter = ({ description }) => (
+const PostFooter = ({ description, noOfLikes }) => (
   <div className="container">
-    <i className="far fa-heart"></i> 32 likes
+    <i className="far fa-heart"></i> {noOfLikes} likes
     <p>{description}</p>
     <style jsx>{`
       .container {
