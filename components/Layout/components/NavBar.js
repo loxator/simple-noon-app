@@ -13,7 +13,7 @@ const NavBar = () => {
           <a className={router.pathname === "/" && "active"}>
             <p className="hide-label">Home</p>
             <div className="hide-icon">
-              <FontAwesomeIcon icon={faHome} />
+              <FontAwesomeIcon size="2x" icon={faHome} />
             </div>
           </a>
         </Link>
@@ -21,7 +21,7 @@ const NavBar = () => {
           <a className={router.pathname === "/favorites" && "active"}>
             <p className="hide-label">Liked</p>
             <div className="hide-icon">
-              <FontAwesomeIcon icon={faHeart} />
+              <FontAwesomeIcon size="2x" icon={faHeart} />
             </div>
           </a>
         </Link>
@@ -50,17 +50,12 @@ const NavBar = () => {
             width: 100%;
             display: flex;
             justify-content: space-evenly;
-            height: 5%;
           }
           .hide-label {
             display: none !important;
           }
         }
-        @media only screen and (min-device-width: 500px) and (max-device-width: 1440px) {
-          .navbar {
-            height: 15%;
-          }
-        }
+
         .active {
           color: white !important;
         }

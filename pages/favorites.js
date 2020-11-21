@@ -40,7 +40,7 @@ const Favorites = () => {
           flex-direction: column;
           align-items: center;
           margin: auto;
-          padding-top: 50vh;
+          padding-top: 45vh;
         }
       `}</style>
     </Layout>
