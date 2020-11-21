@@ -30,9 +30,15 @@ const Posts = ({ post }) => {
       </div>
       <PostFooter description={description} noOfLikes={noOfLikes} />
       <style jsx>{`
-        @media only screen and (min-device-width: 800px) {
+        @media only screen and (min-device-width: 1210px) and (max-device-width: 1440px) {
+          .post-container {
+            width: 50%;
+          }
+        }
+        @media only screen and (min-device-width: 1440px) {
           .post-container {
             width: 33%;
+            margin-top: 100px;
           }
         }
         .posts-center {

@@ -1,9 +1,9 @@
 const PostFooter = ({ description, noOfLikes }) => (
-  <div className="container">
+  <div className="footer-container">
     <i className="far fa-heart"></i> {noOfLikes} likes
     <p>{description}</p>
     <style jsx>{`
-      .container {
+      .footer-container {
         padding-top: 5%;
         background-color: #red;
       }

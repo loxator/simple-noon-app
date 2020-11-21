@@ -14,7 +14,7 @@ const Home = () => {
         ))}
       </div>
       <style jsx>{`
-        @media only screen and (min-device-width: 800px) {
+        @media only screen and (min-device-width: 768px) {
           .index-container {
             display: flex;
             flex-wrap: wrap;

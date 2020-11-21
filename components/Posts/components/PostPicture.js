@@ -16,7 +16,9 @@ const PostPicture = ({
       <div className="post-picture-subcontainer">
         <div className="post-picture-description">
           <p className="post-picture-description-title">{title}</p>
-          <p className="post-picture-description-price">AED {price}</p>
+          <p className="post-picture-description-price">
+            <strong>AED {price}</strong>
+          </p>
         </div>
         <Favorite
           noOfLikes={noOfLikes}
@@ -27,6 +29,9 @@ const PostPicture = ({
       <style jsx>{`
         .post-picture-container {
           position: relative;
+          height: 600px;
+          width: 600px;
+          margin: auto;
         }
 
         .post-picture-img {
@@ -47,7 +52,7 @@ const PostPicture = ({
         .post-picture-description {
           color: white;
           top: 65%;
-          font-size: 12px;
+          font-size: 16px;
           padding: 10px;
         }
       `}</style>

@@ -2,40 +2,62 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { faHome, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const NavBar = () => {
   const router = useRouter();
 
   return (
     <div>
       <div className="navbar">
-        <Link href="/" className={router.pathname === "/favorites" && "active"}>
-          <a>
-            <FontAwesomeIcon
-              icon={faHome}
-              style={router.pathname === "/" && { color: "white" }}
-            />
+        <Link href="/">
+          <a className={router.pathname === "/" && "active"}>
+            <p className="hide-label">Home</p>
+            <div className="hide-icon">
+              <FontAwesomeIcon icon={faHome} />
+            </div>
           </a>
         </Link>
         <Link href="/favorites">
-          <a>
-            <FontAwesomeIcon
-              icon={faHeart}
-              style={router.pathname === "/favorites" && { color: "white" }}
-            />
+          <a className={router.pathname === "/favorites" && "active"}>
+            <p className="hide-label">Liked</p>
+            <div className="hide-icon">
+              <FontAwesomeIcon icon={faHeart} />
+            </div>
           </a>
         </Link>
       </div>
       <style jsx>{`
-        .navbar {
-          background-color: #4392f1;
-          overflow: hidden;
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-          display: flex;
-          justify-content: space-evenly;
+        @media only screen and (min-device-width: 1440px) {
+          .navbar {
+            top: 0;
+            background-color: #4392f1;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+          }
+          .hide-icon {
+            display: none !important;
+          }
         }
-
+        @media only screen and (max-device-width: 1440px) {
+          .navbar {
+            background-color: #4392f1;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+          }
+          .hide-label {
+            display: none !important;
+          }
+        }
+        .active {
+          color: white !important;
+        }
         /* Style the links inside the navigation bar */
         .navbar a {
           display: block;
