@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, posts }) {
 MyApp.getInitialProps = async ({ Component, ctx }) => {
   let posts = [];
   try {
-    const response = await fetch(`${process.env.API_ENDPOINT}/posts`);
+    const response = await fetch(`${process.env.API_ENDPOINT}/api/posts`);
     posts = await response.json();
   } catch (error) {
     console.log("error", error);
