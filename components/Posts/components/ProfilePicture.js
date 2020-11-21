@@ -13,7 +13,7 @@ const ProfilePicture = ({ username, profileImg }) => {
           alt="Profile Picture"
         />
       </div>
-      <span>{username}</span>
+      <span className="profile-picture-username">{username}</span>
       <style jsx>{`
         .profile-picture-container {
           display: flex;
@@ -29,6 +29,10 @@ const ProfilePicture = ({ username, profileImg }) => {
           width: 30px;
           height: 30px;
           border-radius: 50%;
+        }
+        .profile-picture-username {
+          color: #4392f1;
+          cursor: pointer;
         }
       `}</style>
     </div>
