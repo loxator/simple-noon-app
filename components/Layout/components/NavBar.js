@@ -50,9 +50,15 @@ const NavBar = () => {
             width: 100%;
             display: flex;
             justify-content: space-evenly;
+            height: 5%;
           }
           .hide-label {
             display: none !important;
+          }
+        }
+        @media only screen and (min-device-width: 500px) and (max-device-width: 1440px) {
+          .navbar {
+            height: 15%;
           }
         }
         .active {
