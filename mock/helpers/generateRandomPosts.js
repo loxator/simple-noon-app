@@ -1,4 +1,4 @@
-//import generateRandom from "../../utils/generateRandomNumber";
+//Have to redefine function to run `node fileName` as import is ES6
 const generateRandom = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
