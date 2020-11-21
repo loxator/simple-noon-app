@@ -13,7 +13,7 @@ const Favorite = ({ isFavorite, postId }) => {
       className={clsx("icon-container", isFavorite && "favorite")}
       onClick={() => toggleFavorite(postId)}
     >
-      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon size="2x" icon={faHeart} />
       <style jsx>{`
         .icon-container {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
