@@ -29,8 +29,6 @@ const PostPicture = ({
       <style jsx>{`
         .post-picture-container {
           position: relative;
-          height: 600px;
-          width: 600px;
           margin: auto;
         }
 
@@ -49,6 +47,17 @@ const PostPicture = ({
           padding: 5%;
           justify-content: space-between;
         }
+        @media only screen and (max-device-width: 425px) {
+          .post-picture-subcontainer {
+            top: 50%;
+          }
+        }
+        @media only screen and (min-device-width: 425px) and (max-device-width: 1000px) {
+          .post-picture-subcontainer {
+            top: 60%;
+          }
+        }
+
         .post-picture-description {
           color: white;
           top: 65%;

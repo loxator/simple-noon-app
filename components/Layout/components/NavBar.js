@@ -27,7 +27,7 @@ const NavBar = () => {
         </Link>
       </div>
       <style jsx>{`
-        @media only screen and (min-device-width: 1440px) {
+        @media only screen and (min-device-width: 1360px) {
           .navbar {
             top: 0;
             background-color: #4392f1;
@@ -41,7 +41,7 @@ const NavBar = () => {
             display: none !important;
           }
         }
-        @media only screen and (max-device-width: 1440px) {
+        @media only screen and (max-device-width: 1360px) {
           .navbar {
             background-color: #4392f1;
             overflow: hidden;

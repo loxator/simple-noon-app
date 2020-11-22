@@ -35,12 +35,12 @@ const Posts = ({ post }) => {
         comments={comments}
       />
       <style jsx>{`
-        @media only screen and (min-device-width: 1210px) and (max-device-width: 1440px) {
+        @media only screen and (min-device-width: 678px) and (max-device-width: 1360px) {
           .post-container {
             width: 50%;
           }
         }
-        @media only screen and (min-device-width: 1440px) {
+        @media only screen and (min-device-width: 1360px) {
           .post-container {
             width: 33%;
             margin-top: 100px;
@@ -54,6 +54,7 @@ const Posts = ({ post }) => {
         }
         .posts-center {
           padding: 30px;
+          margin: auto;
         }
       `}</style>
       <hr />
