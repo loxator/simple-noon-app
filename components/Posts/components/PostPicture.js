@@ -36,6 +36,7 @@ const PostPicture = ({
           max-width: 100%;
           max-height: 100%;
           display: block;
+          margin: auto;
         }
 
         .post-picture-subcontainer {
@@ -55,6 +56,11 @@ const PostPicture = ({
         @media only screen and (min-device-width: 425px) and (max-device-width: 1000px) {
           .post-picture-subcontainer {
             top: 60%;
+          }
+        }
+        @media only screen and (min-device-width: 2200px) {
+          .post-picture-subcontainer {
+            padding: 0 15%;
           }
         }
 
