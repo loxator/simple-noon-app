@@ -18,6 +18,6 @@ This is a website made using NextJS for the purpose of a test sent by Noon.com .
 
 ## Installation
 
-Running `yarn dev` will install all dependencies and start the development server at `http://localhost:3000`
+Running `yarn && yarn dev` or `npm install && npm run dev` will install all dependencies and start the development server at `http://localhost:3000`
 
 ---
